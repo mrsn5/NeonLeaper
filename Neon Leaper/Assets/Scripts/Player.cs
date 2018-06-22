@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-
+    
+    public static Player lastPlayer = null;
 
     private float HSpeed = 10f;
     //private float maxVertHSpeed = 20f;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour {
     {
 //      startTime = Time.time;
         anim = GetComponent<Animator> ();
+        lastPlayer = this;
     }
 
     void FixedUpdate ()
