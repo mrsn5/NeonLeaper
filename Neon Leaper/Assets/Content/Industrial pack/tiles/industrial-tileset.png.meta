@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4ada9fbea3d244930a6e211286558c45
-timeCreated: 1529689247
+timeCreated: 1529693947
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -111,10 +111,10 @@ TextureImporter:
       name: industrial-tileset_2
       rect:
         serializedVersion: 2
-        x: 2301
-        y: 2829
-        width: 1030
-        height: 1779
+        x: 2526
+        y: 3484
+        width: 774
+        height: 758
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,6 +122,19 @@ TextureImporter:
       tessellationDetail: 0
     - serializedVersion: 2
       name: industrial-tileset_3
+      rect:
+        serializedVersion: 2
+        x: 3581
+        y: 2764
+        width: 1027
+        height: 1782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: industrial-tileset_4
       rect:
         serializedVersion: 2
         x: 0
@@ -134,26 +147,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: industrial-tileset_4
+      name: industrial-tileset_5
       rect:
         serializedVersion: 2
         x: 1016
         y: 2573
         width: 1291
         height: 1269
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: industrial-tileset_5
-      rect:
-        serializedVersion: 2
-        x: 3070
-        y: 2062
-        width: 1028
-        height: 1017
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: industrial-tileset_7
       rect:
         serializedVersion: 2
-        x: 766
-        y: 1036
-        width: 1285
-        height: 1271
+        x: 876
+        y: 957
+        width: 1287
+        height: 1269
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: industrial-tileset_8
       rect:
         serializedVersion: 2
-        x: 2042
-        y: 2062
-        width: 776
-        height: 756
+        x: 2301
+        y: 782
+        width: 1287
+        height: 1269
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: industrial-tileset_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 269
-        width: 771
-        height: 1269
+        x: 3581
+        y: 1693
+        width: 1027
+        height: 1015
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,9 +215,9 @@ TextureImporter:
       name: industrial-tileset_10
       rect:
         serializedVersion: 2
-        x: 2301
-        y: 782
-        width: 1287
+        x: 0
+        y: 269
+        width: 771
         height: 1269
       alignment: 0
       pivot: {x: 0, y: 0}

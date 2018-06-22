@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
     public LayerMask whatIsGround;
     private bool grounded = false;
     private float groundRadius = 0.15f;
-    private float jumpForce = 14f;
+    private float jumpForce = 20f;
 
     private Animator anim;
 
