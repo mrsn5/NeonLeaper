@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 97df7bf038c30445f93e7ae2ff3b4aae
+timeCreated: 1529686448
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 1980XX
+  fontNames:
+  - 1980XX
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
