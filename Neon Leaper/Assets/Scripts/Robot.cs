@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Robot : MonoBehaviour {
+public class Robot : MonoBehaviour
+{
 
     public enum Mode { GoToA, GoToB, Attack, Dead }
 
@@ -68,9 +69,10 @@ public class Robot : MonoBehaviour {
         transform.position += new Vector3(-value, .0f, .0f) * speed * Time.deltaTime;
     }
 
-    void Attack() 
-    { 
-        if (!animator.GetBool("isTransit")) {
+    void Attack()
+    {
+        if (!animator.GetBool("isTransit"))
+        {
             animator.SetBool("isAttacking", true);
             float value = this.getDirection(Player.lastPlayer.transform.position);
             sr.flipX = (value > 0) ? false : true;
@@ -96,13 +98,13 @@ public class Robot : MonoBehaviour {
         float angle = Mathf.Atan2(v.y, v.x) / Mathf.PI * 180;
         if (angle > 60f && angle < 120f)
         {
-            //player.Jump();
+            player.Jump();
             Kill();
         }
         else
         {
             //animator.SetTrigger("isAttacking");
-            //player.Kill();
+            player.Kill();
         }
     }
 
@@ -135,20 +137,20 @@ public class Robot : MonoBehaviour {
         return false;
     }
 
-    //private IEnumerator KillCoroutine()
-    //{
-        //mode = Mode.Dead;
-        //animator.SetTrigger("isDead");
-        //yield return new WaitForSeconds(1f);
-       // Destroy(this.gameObject);
-    //}
+    private IEnumerator KillCoroutine()
+    {
+        mode = Mode.Dead;
+        animator.SetTrigger("isDead");
+        yield return new WaitForSeconds(2 / 3f);
+        Destroy(this.gameObject);
+    }
 
 
 
     public void Kill()
     {
-        //StartCoroutine(KillCoroutine());
-        Destroy(this.gameObject);
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        StartCoroutine(KillCoroutine());
 
     }
 
