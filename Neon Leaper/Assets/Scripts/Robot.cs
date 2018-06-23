@@ -35,6 +35,7 @@ public class Robot : MonoBehaviour
 
     public void Update()
     {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         if (mode != Mode.Dead)
         {
             mode = (playerHere()) ? Mode.Attack : prevMode;

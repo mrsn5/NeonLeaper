@@ -100,17 +100,20 @@ public class Player : MonoBehaviour {
 
     private IEnumerator KillCoroutine()
     {
+        grounded = true;
+        anim.SetBool("ground", grounded);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         isDead = true;
         anim.SetTrigger("isDead");
         yield return new WaitForSeconds(1f);
-        Destroy(this.gameObject);
-        LevelController.current.Respawn(null);
+        LevelController.current.Respawn(this);
+        isDead = false;
 
     }
 
     public void Kill()
     {
-        StartCoroutine(KillCoroutine());
+        if (!isDead) StartCoroutine(KillCoroutine());
     }
 
 }

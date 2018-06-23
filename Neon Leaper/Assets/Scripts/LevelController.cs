@@ -22,8 +22,7 @@ public class LevelController : MonoBehaviour
 
     public void Respawn(Player player)
     {
-        GameObject p = Instantiate(playerPrefab);
-        p.transform.position = startingPosition;
+        player.transform.position = startingPosition;
     }
 
 
