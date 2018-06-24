@@ -25,10 +25,10 @@ public class Collectable : MonoBehaviour {
     {
         if (this.isActiveAndEnabled)
         {
-            Player rabbit = collider.GetComponent<Player>();
-            if (rabbit != null)
+            Player player = collider.GetComponent<Player>();
+            if (player != null)
             {
-                this.OnPlayerHit(rabbit);
+                this.OnPlayerHit(player);
             }
         }
     }

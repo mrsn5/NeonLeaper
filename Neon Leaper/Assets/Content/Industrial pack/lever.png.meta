@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: 8ea310de4d11e47c1ab1602642a510d8
-timeCreated: 1529866977
+guid: 18abf11afae1b4280a8a5038354d5e0e
+timeCreated: 1529869451
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: laser-turn-off_0
-    21300002: laser-turn-off_1
-    21300004: laser-turn-off_2
-    21300006: laser-turn-off_3
-    21300008: laser-turn-off_4
-    21300010: laser-turn-off_5
-    21300012: laser-turn-off_6
+    21300000: lever_0
+    21300002: lever_1
+    21300004: lever_2
+    21300006: lever_3
+    21300008: lever_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -77,91 +75,65 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: laser-turn-off_0
+      name: lever_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 256
-        height: 1024
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_1
+      name: lever_1
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 256
-        height: 1024
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_2
+      name: lever_2
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 256
-        height: 1024
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_3
+      name: lever_3
       rect:
         serializedVersion: 2
         x: 768
         y: 0
         width: 256
-        height: 1024
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_4
+      name: lever_4
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 256
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laser-turn-off_5
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 256
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laser-turn-off_6
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 256
-        height: 1024
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
