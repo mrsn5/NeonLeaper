@@ -105,7 +105,7 @@ public class Player : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         isDead = true;
         anim.SetTrigger("isDead");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
         LevelController.current.Respawn(this);
         isDead = false;
 
