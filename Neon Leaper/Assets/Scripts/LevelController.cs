@@ -28,13 +28,32 @@ public class LevelController : MonoBehaviour
     public Text crystalsText;
     public Text warningText;
 
+    private LevelStats stats;
+
     void Awake()
     {
         slider.value = 1f;
+        LoadStatistics();
         current = this;
         decreaseEnergyTime = defaultIntervalTimeDecrease;
     }
+    
+    public void LoadStatistics()
+    {
+        this.stats = LevelStats.Deserialize(SceneManager.GetActiveScene().name);
+        if (this.stats == null) this.stats = new LevelStats();
+    }
 
+    public void Save()
+    {
+        if (stats.levelPassed)
+        {
+            PlayerPrefs.SetString(SceneManager.GetActiveScene().name, JsonUtility.ToJson(this.stats));
+
+            PlayerPrefs.Save();
+        }
+    }
+    
     private void Start()
     {
         SetBoxes();     
@@ -63,6 +82,10 @@ public class LevelController : MonoBehaviour
         }
     }
 
+    public void setLevelPassed(){
+        stats.levelPassed = true;
+    }
+    
     public void setStartPosition(Vector3 pos)
     {
         this.startingPosition = pos;
