@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laser : MonoBehaviour {
+public class Laser : Activable {
 
     [SerializeField]
     private bool isActive = false;
@@ -12,17 +12,12 @@ public class Laser : MonoBehaviour {
         anim = GetComponent<Animator>();
 	}
 
-    private IEnumerator SwitchCoroutine()
+    protected override IEnumerator SwitchCoroutine()
     {
         if (!isActive) anim.SetTrigger("turnOn"); 
         else anim.SetTrigger("turnOff");
         yield return new WaitForSeconds(0.583f);
         isActive = !isActive;
-    }
-
-    public void Switch()
-    {
-        StartCoroutine(SwitchCoroutine());
     }
 
     void OnTriggerEnter2D(Collider2D collision)

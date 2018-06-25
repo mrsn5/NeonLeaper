@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Lever : MonoBehaviour {
-
+    
     [SerializeField]
-    Laser laser;
+    Activable activable;
     [SerializeField]
     bool isAvailable = false;
     bool isOn = false;
@@ -23,7 +23,7 @@ public class Lever : MonoBehaviour {
         if (isAvailable && Input.GetKeyDown(KeyCode.E) && !inProcess)
         {
             inProcess = true;
-            laser.Switch();
+            activable.Switch();
             isOn = !isOn;
             anim.SetBool("isOn", isOn);
             StartCoroutine(SwitchCoroutine());
