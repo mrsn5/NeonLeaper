@@ -24,6 +24,7 @@ public class LevelController : MonoBehaviour
     private int defaultCrystals = 0;
    
     private int crystals;
+    
     public Text crystalsText;
     public Text warningText;
 
@@ -102,6 +103,10 @@ public class LevelController : MonoBehaviour
         SetBoxes();       
     }
 
+    public bool allCrystalsCollected()
+    {
+        return crystals==defaultCrystals;
+    }
 
     public void addCrystal()
     {
