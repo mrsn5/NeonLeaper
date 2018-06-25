@@ -26,11 +26,15 @@ public class Player : MonoBehaviour {
 
     bool isDead = false;
 
+    private float energy = 50;
+    
+    
     // Use this for initialization
     void Awake ()
     {
 //      startTime = Time.time;
         anim = GetComponent<Animator> ();
+        Energy.current.setValue(energy);
         lastPlayer = this;
         LevelController.current.setStartPosition(transform.position);
     }
@@ -105,10 +109,10 @@ public class Player : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         isDead = true;
         anim.SetTrigger("isDead");
+        decreaseEnergy(30);
         yield return new WaitForSeconds(0.8f);
         LevelController.current.Respawn(this);
         isDead = false;
-
     }
 
     public void Kill()
@@ -116,4 +120,15 @@ public class Player : MonoBehaviour {
         if (!isDead) StartCoroutine(KillCoroutine());
     }
 
+    public void addEnergy(float val)
+    {
+        energy += val;
+        Energy.current.setValueSlowly(energy);
+    }
+    
+    public void decreaseEnergy(float val)
+    {
+        energy -= val;
+        Energy.current.setValueSlowly(energy);
+    }
 }

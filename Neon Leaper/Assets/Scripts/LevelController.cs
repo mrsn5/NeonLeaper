@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-
     public static LevelController current;
     Vector3 startingPosition;
     [SerializeField]
@@ -20,6 +19,11 @@ public class LevelController : MonoBehaviour
 
    
 
+    public int defaultCrystals;
+   
+    private int crystals;
+    public Text crystalsText;
+
     void Awake()
     {
         slider.value = 1f;
@@ -29,6 +33,11 @@ public class LevelController : MonoBehaviour
     private void Start()
     {
         SetBoxes();     
+    }
+    
+    void Update()
+    {
+        crystalsText.text = string.Format("{0}/{1}", crystals, defaultCrystals);
     }
 
     public void setStartPosition(Vector3 pos)
@@ -70,5 +79,10 @@ public class LevelController : MonoBehaviour
         SetBoxes();
     }
 
+
+    public void addCrystal()
+    {
+        crystals++;
+    }
 
 }

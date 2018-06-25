@@ -6,7 +6,7 @@ public class Battery : Collectable
 {
     protected override void OnPlayerHit(Player player)
     {
-        //LevelController.current.addCoins(1);
+        Player.lastPlayer.addEnergy(30);
         this.CollectedHide();
     }
 }
