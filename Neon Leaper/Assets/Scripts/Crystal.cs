@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class Crystal : Collectable
 {
-	protected override void OnPlayerHit(Player player)
-	{
-		LevelController.current.addCrystal();
-		this.CollectedHide();
-	}
+    public new void Start()
+    {
+        base.Start();
+        LevelController.current.incrementDefaultCrystals();
+    }
+
+    protected override void OnPlayerHit(Player player)
+    {
+        LevelController.current.addCrystal();
+        this.CollectedHide();
+    }
 }

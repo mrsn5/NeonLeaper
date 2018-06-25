@@ -19,7 +19,7 @@ public class LevelController : MonoBehaviour
 
    
 
-    public int defaultCrystals;
+    private int defaultCrystals = 0;
    
     private int crystals;
     public Text crystalsText;
@@ -92,6 +92,11 @@ public class LevelController : MonoBehaviour
     public void addCrystal()
     {
         crystals++;
+    }
+
+    public void incrementDefaultCrystals() 
+    {
+        defaultCrystals++;
     }
 
 }
