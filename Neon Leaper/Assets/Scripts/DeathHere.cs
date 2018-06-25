@@ -9,6 +9,7 @@ public class DeathHere : MonoBehaviour
     {
         Player player = collider.GetComponent<Player>();
         if (player != null) { 
+            player.decreaseEnergy(10);
             LevelController.current.Respawn(player);
         }
     }

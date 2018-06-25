@@ -25,8 +25,9 @@ public class Player : MonoBehaviour {
     private Animator anim;
 
     bool isDead = false;
+    bool isActive = true;
 
-    private float energy = 50;
+    private float energy = 100;
     
     
     // Use this for initialization
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (!isDead)
+        if (!isDead && isActive)
         {
             moveXInput = Input.GetAxis("Horizontal");
 
@@ -90,6 +91,7 @@ public class Player : MonoBehaviour {
             else if (moveXInput < 0 && facingRight)
                 Flip();
         }
+
     }
     ////Flipping direction of character
     void Flip()
@@ -113,7 +115,7 @@ public class Player : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         isDead = true;
         anim.SetTrigger("isDead");
-        decreaseEnergy(30);
+        decreaseEnergy(10);
         yield return new WaitForSeconds(0.8f);
         LevelController.current.Respawn(this);
         isDead = false;
@@ -140,4 +142,17 @@ public class Player : MonoBehaviour {
         energy -= val;
         Energy.current.setValueSlowly(energy);
     }
+
+    public void setActive()
+    {
+        GetComponent<Rigidbody2D>().simulated = true; 
+        isActive = true;
+    }
+    public void setInactive()
+    {
+        GetComponent<Rigidbody2D>().simulated = false; 
+        isActive = false;
+    }
+    
+    
 }

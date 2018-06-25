@@ -16,18 +16,22 @@ public class LevelController : MonoBehaviour
     List<Box> boxes = new List<Box>();
     [SerializeField]
     private Slider slider;
-
-   
+    
+    
+    private const float defaultIntervalTimeDecrease=60f;
+    private float decreaseEnergyTime;
 
     public int defaultCrystals;
    
     private int crystals;
     public Text crystalsText;
+    public Text warningText;
 
     void Awake()
     {
         slider.value = 1f;
         current = this;
+        decreaseEnergyTime = defaultIntervalTimeDecrease;
     }
 
     private void Start()
@@ -37,14 +41,24 @@ public class LevelController : MonoBehaviour
     
     void Update()
     {
+        decreaseEnergyTime -= Time.deltaTime;
+        if (decreaseEnergyTime < 0)
+        {
+            Player.lastPlayer.decreaseEnergy(2);
+            decreaseEnergyTime = defaultIntervalTimeDecrease;
+        }
         crystalsText.text = string.Format("{0}/{1}", crystals, defaultCrystals);
-        if(Player.lastPlayer.getEnergy()<10) 
+        if (Player.lastPlayer.getEnergy() <= 0)
+        {
+            LosePopUp.current.Open();
+        }
+        else if(Player.lastPlayer.getEnergy()<20) 
         {   
-            slider.enabled=false;
+            warningText.enabled = true;
         }
         else
         {
-            slider.enabled=true;
+            warningText.enabled = false;
         }
     }
 
@@ -84,7 +98,7 @@ public class LevelController : MonoBehaviour
 
     public void SliderChanged()
     {
-        Player.lastPlayer.decreaseEnergy(10);
+        Player.lastPlayer.decreaseEnergy(2);
         SetBoxes();       
     }
 
