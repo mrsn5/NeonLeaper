@@ -9,6 +9,7 @@ public class Box : MonoBehaviour {
 
     // TODO
     public Vector3[] positions = new Vector3[3];
+    bool isTouched = false;
 
     private void Start()
     {
@@ -18,8 +19,9 @@ public class Box : MonoBehaviour {
     }
 
     private void Update () {
-        for (int state = LevelController.current.GetState(); state < 3; state++)
-            positions[state] = transform.position;
+        if (isTouched)
+            for (int state = LevelController.current.GetState(); state < 3; state++)
+                positions[state] = transform.position;
 	}
 
     public bool HasState(int state)
@@ -30,6 +32,13 @@ public class Box : MonoBehaviour {
 
     public void SetPosition(int state)
     {
+        isTouched = false;
         transform.position = positions[state];
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Player player = collision.collider.GetComponent<Player>();
+        if (player != null) isTouched = true; 
     }
 }

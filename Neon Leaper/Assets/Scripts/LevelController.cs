@@ -18,6 +18,8 @@ public class LevelController : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
+    bool isTouched = false;
+
     void Awake()
     {
         slider.value = 1f;
