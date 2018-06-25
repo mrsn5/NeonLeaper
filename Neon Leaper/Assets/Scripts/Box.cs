@@ -9,12 +9,17 @@ public class Box : MonoBehaviour {
 
     private Vector3[] positions = new Vector3[3];
     private bool isTouched = false;
+    public Transform groundCheck;
+    private Transform heroParent = null;
+    public LayerMask whatIsGround;
+    private float groundRadius = 0.15f;
 
     public void Start()
     {
         LevelController.current.AddBox(this);
         foreach (int i in states)
             positions[i] = transform.position;
+        heroParent = transform.parent;
     }
 
     public void Update () {
@@ -22,6 +27,22 @@ public class Box : MonoBehaviour {
             for (int state = LevelController.current.GetState(); state < 3; state++)
                 positions[state] = transform.position;
 	}
+
+    void FixedUpdate()
+    {
+        Collider2D groundCollider = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+
+        if (groundCollider != null)
+        {
+            MovingPlatform movingPlatform = groundCollider.GetComponent<MovingPlatform>();
+            if (movingPlatform != null) SetNewParent(this.transform, movingPlatform.transform);
+            else SetNewParent(this.transform, heroParent);
+        }
+        else
+        {
+            SetNewParent(this.transform, heroParent);
+        }
+    }
 
     public bool HasState(int state)
     {
@@ -40,5 +61,15 @@ public class Box : MonoBehaviour {
         Player player = collision.collider.GetComponent<Player>();
         if (player != null) isTouched = true;
 
+    }
+
+    static void SetNewParent(Transform obj, Transform new_parent)
+    {
+        if (obj.transform.parent != new_parent)
+        {
+            Vector3 pos = obj.transform.position;
+            obj.transform.parent = new_parent;
+            obj.transform.position = pos;
+        }
     }
 }

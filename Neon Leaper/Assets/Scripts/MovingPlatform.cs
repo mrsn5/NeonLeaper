@@ -12,6 +12,7 @@ public class MovingPlatform : Activable {
 	public float waitingTime = 2f;
 	float time_to_wait;
 
+    [SerializeField]
     bool isActive = false;
 
 	void Start()

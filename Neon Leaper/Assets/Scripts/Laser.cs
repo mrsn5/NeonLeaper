@@ -12,6 +12,11 @@ public class Laser : Activable {
         anim = GetComponent<Animator>();
 	}
 
+    private void Start()
+    {
+        Switch();
+    }
+
     protected override IEnumerator SwitchCoroutine()
     {
         if (!isActive) anim.SetTrigger("turnOn"); 

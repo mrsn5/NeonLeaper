@@ -58,6 +58,7 @@ public class Player : MonoBehaviour {
             {
                 MovingPlatform movingPlatform = groundCollider.GetComponent<MovingPlatform>();
                 if (movingPlatform != null) SetNewParent(this.transform, movingPlatform.transform);
+                else SetNewParent(this.transform, heroParent);
             } else {
                 SetNewParent(this.transform, heroParent);
             }
