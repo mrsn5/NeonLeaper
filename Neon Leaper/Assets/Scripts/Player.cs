@@ -170,6 +170,13 @@ public class Player : MonoBehaviour {
         }
     }
 
+    public void vanish()
+    {
+        setInactive();
+        SpriteRenderer sr = this.GetComponent<SpriteRenderer>();
+        sr.enabled=false;
+    }
+    
     public void setActive()
     {
         GetComponent<Rigidbody2D>().simulated = true; 
