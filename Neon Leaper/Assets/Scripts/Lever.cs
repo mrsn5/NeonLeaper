@@ -32,7 +32,6 @@ public class Lever : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enter");
         Player player = collision.GetComponent<Player>();
         if (player != null) isAvailable = true;
     }

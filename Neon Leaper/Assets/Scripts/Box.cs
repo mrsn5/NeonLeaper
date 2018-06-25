@@ -7,18 +7,17 @@ public class Box : MonoBehaviour {
     [SerializeField]
     private List<int> states;
 
-    // TODO
-    public Vector3[] positions = new Vector3[3];
-    bool isTouched = false;
+    private Vector3[] positions = new Vector3[3];
+    private bool isTouched = false;
 
-    private void Start()
+    public void Start()
     {
         LevelController.current.AddBox(this);
         foreach (int i in states)
             positions[i] = transform.position;
     }
 
-    private void Update () {
+    public void Update () {
         if (isTouched)
             for (int state = LevelController.current.GetState(); state < 3; state++)
                 positions[state] = transform.position;
@@ -39,6 +38,7 @@ public class Box : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Player player = collision.collider.GetComponent<Player>();
-        if (player != null) isTouched = true; 
+        if (player != null) isTouched = true;
+
     }
 }
