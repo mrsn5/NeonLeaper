@@ -120,6 +120,11 @@ public class Player : MonoBehaviour {
         if (!isDead) StartCoroutine(KillCoroutine());
     }
 
+    public float getEnergy()
+    {
+        return energy;
+    }
+    
     public void addEnergy(float val)
     {
         energy += val;

@@ -38,6 +38,14 @@ public class LevelController : MonoBehaviour
     void Update()
     {
         crystalsText.text = string.Format("{0}/{1}", crystals, defaultCrystals);
+        if(Player.lastPlayer.getEnergy()<10) 
+        {   
+            slider.enabled=false;
+        }
+        else
+        {
+            slider.enabled=true;
+        }
     }
 
     public void setStartPosition(Vector3 pos)
@@ -76,7 +84,8 @@ public class LevelController : MonoBehaviour
 
     public void SliderChanged()
     {
-        SetBoxes();
+        Player.lastPlayer.decreaseEnergy(10);
+        SetBoxes();       
     }
 
 
