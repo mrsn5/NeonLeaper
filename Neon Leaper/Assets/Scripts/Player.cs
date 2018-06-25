@@ -34,9 +34,13 @@ public class Player : MonoBehaviour {
     {
 //      startTime = Time.time;
         anim = GetComponent<Animator> ();
-        Energy.current.setValue(energy);
         lastPlayer = this;
         LevelController.current.setStartPosition(transform.position);
+    }
+
+    private void Start()
+    {
+        Energy.current.setValue(energy);
     }
 
     void FixedUpdate ()
