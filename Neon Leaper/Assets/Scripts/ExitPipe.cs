@@ -14,11 +14,13 @@ public class ExitPipe : MonoBehaviour {
                 if(LevelController.current.allCrystalsCollected())
                 {
                     player.vanish();
+                    LevelController.current.setLevelPassed();
+                    LevelController.current.Save();
+                
                     WinPopUp.current.Open();
                 }
                 else
                 {
-                    //LevelPopUp.current.transform.width=350;
                     LevelPopUp.current.Open("Not all crystals!");
                 }
             }
