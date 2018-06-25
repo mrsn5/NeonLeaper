@@ -106,6 +106,11 @@ public class Player : MonoBehaviour {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.y, jumpForce);
     }
 
+    public void StrongJump()
+    {
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.y, 1.5f * jumpForce);
+    }
+
     private IEnumerator KillCoroutine()
     {
         grounded = true;

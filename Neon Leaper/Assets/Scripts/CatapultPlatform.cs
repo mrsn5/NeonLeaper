@@ -9,7 +9,7 @@ public class CatapultPlatform : MonoBehaviour {
         Player player = collision.collider.GetComponent<Player>();
         if (player != null)
         {
-            player.Jump();
+            player.StrongJump();
             gameObject.GetComponentInParent<Catapult>().PlayAnim();
         }
     }
