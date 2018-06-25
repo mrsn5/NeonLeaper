@@ -26,7 +26,7 @@ public class Energy : MonoBehaviour {
 
         period += Time.deltaTime;
         if (period > 2 * Mathf.PI) period -= Mathf.PI;
-        fillArea.color = new Color(fillColor.r, fillColor.g, 0.8f + 2 * Mathf.Sin(period) / 10 );
+        fillArea.color = new Color(fillColor.r, fillColor.g, 0.9f + Mathf.Sin(period) / 10 );
 	}
 
 	public void setValue(float val)
