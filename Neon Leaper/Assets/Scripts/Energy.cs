@@ -13,13 +13,20 @@ public class Energy : MonoBehaviour {
 
     [SerializeField]
     Image fillArea;
+    Color fillColor;
+    float period = 0;
 
     void Awake() {
         current = this;
+        fillColor = fillArea.color;
     }
     
 	void Update () {
-		slider.value=Mathf.MoveTowards(slider.value, valueToBecome, 0.5f);    
+		slider.value=Mathf.MoveTowards(slider.value, valueToBecome, 0.5f);
+
+        period += Time.deltaTime;
+        if (period > 2 * Mathf.PI) period -= Mathf.PI;
+        fillArea.color = new Color(fillColor.r, fillColor.g, 0.8f + 2 * Mathf.Sin(period) / 10 );
 	}
 
 	public void setValue(float val)
