@@ -10,8 +10,10 @@ public class Energy : MonoBehaviour {
     public Slider slider;
 
 	private float valueToBecome = 100;
-		
-		
+
+    [SerializeField]
+    Image fillArea;
+
     void Awake() {
         current = this;
     }
