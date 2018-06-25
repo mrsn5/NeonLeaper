@@ -25,7 +25,7 @@ public class Energy : MonoBehaviour {
 		slider.value=Mathf.MoveTowards(slider.value, valueToBecome, 0.5f);
 
         period += Time.deltaTime;
-        if (period > 2 * Mathf.PI) period -= Mathf.PI;
+        if (period > 2 * Mathf.PI) period -= 2 * Mathf.PI;
         fillArea.color = new Color(fillColor.r, fillColor.g, 0.9f + Mathf.Sin(period) / 10 );
 	}
 
