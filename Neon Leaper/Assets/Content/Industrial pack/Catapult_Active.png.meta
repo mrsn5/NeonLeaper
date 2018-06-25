@@ -1,16 +1,18 @@
 fileFormatVersion: 2
-guid: 8ea310de4d11e47c1ab1602642a510d8
-timeCreated: 1529866977
+guid: fa2f72aeb9a5a4310b45f1f526385681
+timeCreated: 1529932819
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: laser-turn-off_0
-    21300002: laser-turn-off_1
-    21300004: laser-turn-off_2
-    21300006: laser-turn-off_3
-    21300008: laser-turn-off_4
-    21300010: laser-turn-off_5
-    21300012: laser-turn-off_6
+    21300000: Catapult_Active_0
+    21300002: Catapult_Active_1
+    21300004: Catapult_Active_2
+    21300006: Catapult_Active_3
+    21300008: Catapult_Active_4
+    21300010: Catapult_Active_5
+    21300012: Catapult_Active_6
+    21300014: Catapult_Active_7
+    21300016: Catapult_Active_8
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -77,91 +79,117 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: laser-turn-off_0
+      name: Catapult_Active_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 256
-        height: 1024
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_1
+      name: Catapult_Active_1
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 256
-        height: 1024
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_2
+      name: Catapult_Active_2
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 256
-        height: 1024
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_3
+      name: Catapult_Active_3
       rect:
         serializedVersion: 2
         x: 768
         y: 0
         width: 256
-        height: 1024
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_4
+      name: Catapult_Active_4
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 256
-        height: 1024
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_5
+      name: Catapult_Active_5
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
         width: 256
-        height: 1024
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laser-turn-off_6
+      name: Catapult_Active_6
       rect:
         serializedVersion: 2
         x: 1536
         y: 0
         width: 256
-        height: 1024
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Catapult_Active_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Catapult_Active_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
