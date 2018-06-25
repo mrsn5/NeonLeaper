@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour {
+public class MovingPlatform : Activable {
 	public Vector3 MoveBy;
 	Vector3 pointA;
 	Vector3 pointB;
@@ -11,6 +11,8 @@ public class MovingPlatform : MonoBehaviour {
 
 	public float waitingTime = 2f;
 	float time_to_wait;
+
+    bool isActive = false;
 
 	void Start()
 	{
@@ -21,21 +23,24 @@ public class MovingPlatform : MonoBehaviour {
 
 	void Update()
 	{
-		time_to_wait -= Time.deltaTime;
-		if (time_to_wait <= 0)
-		{
-			Vector3 my_pos = this.transform.position;
-			Vector3 target = (going_to_a) ? this.pointA : this.pointB;
-			Vector3 destination = target - my_pos;
-			destination.z = 0;
-			destination.Normalize();
-			this.transform.position += destination * speed * Time.deltaTime;
-			if (isArrived(my_pos, target))
-			{
-				going_to_a = !going_to_a;
-				time_to_wait = waitingTime;
-			}
-		}
+        if (isActive)
+        {
+            time_to_wait -= Time.deltaTime;
+            if (time_to_wait <= 0)
+            {
+                Vector3 my_pos = this.transform.position;
+                Vector3 target = (going_to_a) ? this.pointA : this.pointB;
+                Vector3 destination = target - my_pos;
+                destination.z = 0;
+                destination.Normalize();
+                this.transform.position += destination * speed * Time.deltaTime;
+                if (isArrived(my_pos, target))
+                {
+                    going_to_a = !going_to_a;
+                    time_to_wait = waitingTime;
+                }
+            }
+        }
     }
         
         
@@ -46,6 +51,12 @@ public class MovingPlatform : MonoBehaviour {
 		return Vector3.Distance(pos, target) < 0.02f;
 	}
 
-	
+    protected override IEnumerator SwitchCoroutine()
+    {
+        time_to_wait = 0;
+        isActive = !isActive;
+        yield return null;
+    }
+
 	
 }

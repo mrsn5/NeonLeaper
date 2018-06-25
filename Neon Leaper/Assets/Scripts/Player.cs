@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
     bool isDead = false;
 
     private float energy = 50;
-    
+    private Transform heroParent = null;
     
     // Use this for initialization
     void Awake ()
@@ -41,14 +41,24 @@ public class Player : MonoBehaviour {
     private void Start()
     {
         Energy.current.setValue(energy);
+        heroParent = transform.parent;
     }
 
     void FixedUpdate ()
     {
         if (!isDead)
         {
-            grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+            Collider2D groundCollider = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+            grounded = groundCollider;
             anim.SetBool("ground", grounded);
+
+            if (groundCollider != null)
+            {
+                MovingPlatform movingPlatform = groundCollider.GetComponent<MovingPlatform>();
+                if (movingPlatform != null) SetNewParent(this.transform, movingPlatform.transform);
+            } else {
+                SetNewParent(this.transform, heroParent);
+            }
         }
     }
 
@@ -145,4 +155,16 @@ public class Player : MonoBehaviour {
         energy -= val;
         Energy.current.setValueSlowly(energy);
     }
+
+
+    static void SetNewParent(Transform obj, Transform new_parent)
+    {
+        if (obj.transform.parent != new_parent)
+        {
+            Vector3 pos = obj.transform.position;
+            obj.transform.parent = new_parent;
+            obj.transform.position = pos;
+        }
+    }
+
 }
