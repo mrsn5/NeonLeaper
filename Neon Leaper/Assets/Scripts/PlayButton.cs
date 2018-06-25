@@ -9,6 +9,6 @@ public class PlayButton : MonoBehaviour {
     
 	public void Play()
     {
-        SceneManager.LoadScene("Level_One");
+        SceneManager.LoadScene("Level 1");
     }
 }
