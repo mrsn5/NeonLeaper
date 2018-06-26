@@ -16,7 +16,7 @@ public class LevelController : MonoBehaviour
     List<Box> boxes = new List<Box>();
     [SerializeField]
     private Slider slider;
-    
+    public TeleTextJPixelArt mainCamera;
     
     private const float defaultIntervalTimeDecrease=60f;
     private float decreaseEnergyTime;
@@ -123,8 +123,38 @@ public class LevelController : MonoBehaviour
     public void SliderChanged()
     {
         Player.lastPlayer.decreaseEnergy(2);
-        SetBoxes();       
+        StartCoroutine(ChangeCoroutine());
     }
+
+    private IEnumerator ChangeCoroutine()
+    {
+        if (mainCamera == null)
+        {
+            yield return null;
+        }
+
+        float counter = 1;
+        while (counter < 2f) 
+        {
+
+            mainCamera.pixelSize = (int)((2 * counter - 1.9f) * 10);
+            counter += Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+
+        SetBoxes();
+
+        while (counter > 1f)
+        {
+            mainCamera.pixelSize = (int)((2 * counter - 1.9f) * 10);
+            counter -= Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+
+        yield return null;
+    }
+
+
 
     public bool allCrystalsCollected()
     {
