@@ -63,6 +63,6 @@ return to your relatives?... depends only on your taken
 decisions...
 
 # Assets
-[Industrial pack](https://ollieberzs.itch.io/industrial-pack) made by OllieBerzs
-[16x16 Industrial Tileset](https://0x72.itch.io/16x16-industrial-tileset) made by 0x72
-[UI Buttons](https://kicked-in-teeth.itch.io/button-ui) made by Kicked-in-Teeth
+- [Industrial pack](https://ollieberzs.itch.io/industrial-pack) made by OllieBerzs
+- [16x16 Industrial Tileset](https://0x72.itch.io/16x16-industrial-tileset) made by 0x72
+- [UI Buttons](https://kicked-in-teeth.itch.io/button-ui) made by Kicked-in-Teeth
