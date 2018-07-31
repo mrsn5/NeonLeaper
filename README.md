@@ -19,13 +19,13 @@ The further in time the journey, the more energy is required for the jump.
 
 Our superpower can be used in many ways:
 
-  • to foresee the future (short-term leap forward);
+  - to foresee the future (short-term leap forward);
   
-  • change the past (for example, divert the attention of the guard while you steal important drawing);
+  - change the past (for example, divert the attention of the guard while you steal important drawing);
   
-  • clone yourself (make a few copies of yourself, that would move /lift a heavy object or break the door);
+  - clone yourself (make a few copies of yourself, that would move /lift a heavy object or break the door);
   
-  • carry an object from the past to the future (take the key, open the door, and back in the past, until no one noticed).
+  - carry an object from the past to the future (take the key, open the door, and back in the past, until no one noticed).
   
 You can also copy objects (make a super-power laser of several small, build a wall of one brick, etc.).
 
