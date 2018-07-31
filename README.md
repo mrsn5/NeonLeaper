@@ -1,7 +1,9 @@
 # NeonLeaper
 **Genre**: *Platform / Puzzle*
+
 ![Game Gif 0](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/0.gif?raw=true)
-###Plot
+
+# Plot
 Life was threatened. People are fighting not for food and water, but for air. 
 There was no more food on Earth, only algae that could survive in harsh conditions. 
 And only you, our hero, can change everything.
@@ -29,21 +31,26 @@ change now can lead to the "butterfly effect"! Will you
 return to your relatives?... depends only on your taken
 decisions...
 
-###Mechanics:
+# Mechanics:
 The hero has only one ability: **travelling through time** for a certain amount of energy. 
+
 ![Game Gif 1](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/1.gif?raw=true)
+
 The further in time the journey, the more energy is required for the jump. 
+
+![Game Gif 2](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/2.gif?raw=true)
+
 **Energy** at each level is **limited**, but it can be replenished from batteries or from a street lamp.
+
+![Game Gif 3](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/3.gif?raw=true)
+
 Our superpower can be used in many ways:
   • to foresee the future (short-term leap forward);
   • change the past (for example, divert the attention of the guard while you steal important drawing);
   • clone yourself (make a few copies of yourself, that would move /lift a heavy object or break the door);
-  • carry an object from the past to the future (take the key, open the door, and
-Back in the past, until no one noticed).
+  • carry an object from the past to the future (take the key, open the door, and back in the past, until no one noticed).
 You can also copy objects (make a super-power laser of several small, build a wall of one brick, etc.).
 
-![Game Gif 2](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/2.gif?raw=true)
-![Game Gif 3](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/3.gif?raw=true)
 ![Game Gif 4](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/4.gif?raw=true)
 ![Game Gif 5](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/5.gif?raw=true)
 ![Game Gif 6](https://github.com/mrsn5/NeonLeaper/blob/master/Neon%20Leaper/Assets/Content/samples/6.gif?raw=true)
